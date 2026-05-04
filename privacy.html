@@ -289,8 +289,9 @@
     document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
   }
   // Auto-detect browser language
+  const hashLang = window.location.hash === '#es' ? 'es' : null;
   const browserLang = (navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
-  setLang(browserLang);
+  setLang(hashLang || browserLang);
 </script>
 
 </body>
