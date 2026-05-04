@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afrodite — Privacy Policy</title>
+  <style>
+    :root {
+      --mauve: #5E3E4D;
+      --plum: #3B2C3E;
+      --rose: #C4878E;
+      --cream: #FAF7F4;
+      --card: #F6F3EF;
+      --border: rgba(94,62,77,0.15);
+      --text: #292524;
+      --muted: #78716C;
+      --small: #9E9189;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    header {
+      background: var(--plum);
+      color: #fff;
+      padding: 28px 24px 20px;
+      text-align: center;
+    }
+    header .logo { font-size: 32px; margin-bottom: 6px; }
+    header h1 { font-size: 20px; font-weight: 600; letter-spacing: 0.3px; }
+    header p { font-size: 12px; opacity: 0.7; margin-top: 4px; }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 24px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-btn {
+      padding: 6px 20px;
+      border-radius: 20px;
+      border: 1.5px solid var(--mauve);
+      background: transparent;
+      color: var(--mauve);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .lang-btn.active {
+      background: var(--mauve);
+      color: #fff;
+    }
+    .content { display: none; max-width: 680px; margin: 0 auto; padding: 28px 20px 60px; }
+    .content.active { display: block; }
+    .updated {
+      font-size: 12px;
+      color: var(--small);
+      margin-bottom: 24px;
+      padding: 10px 14px;
+      background: var(--card);
+      border-radius: 10px;
+      border-left: 3px solid var(--rose);
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--plum);
+      margin: 28px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2:first-of-type { margin-top: 0; }
+    p { margin-bottom: 12px; color: var(--text); }
+    ul { margin: 8px 0 12px 18px; }
+    li { margin-bottom: 6px; }
+    .highlight {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 12px 0;
+    }
+    .highlight p { margin: 0; font-size: 14px; }
+    a { color: var(--mauve); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: rgba(94,62,77,0.08);
+      color: var(--mauve);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      margin-right: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--small);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✦</div>
+  <h1>Privacy Policy</h1>
+  <p>Política de Privacidad</p>
+</header>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('en')">English</button>
+  <button class="lang-btn" onclick="setLang('es')">Español</button>
+</div>
+
+<!-- ═══════════════════════  ENGLISH  ═══════════════════════ -->
+<div class="content active" id="lang-en">
+
+  <p class="updated">Last updated: May 1, 2026</p>
+
+  <h2>1. Who We Are</h2>
+  <p>Afrodite is a personal menstrual and wellness cycle tracker developed by an independent developer. The app is designed with a <strong>privacy-first, offline-only</strong> philosophy: your health data never leaves your device unless you explicitly choose to export it.</p>
+
+  <h2>2. Our Core Privacy Promise</h2>
+  <div class="highlight">
+    <p>🔒 <strong>Afrodite does not collect, transmit, or store your personal or health data on any server.</strong> All data lives exclusively on your device, encrypted at rest.</p>
+  </div>
+
+  <h2>3. Data We Store Locally</h2>
+  <p>Afrodite stores the following data <strong>only on your device</strong>:</p>
+  <ul>
+    <li><span class="badge">Cycle</span> Menstrual dates, cycle length, period length</li>
+    <li><span class="badge">Flow</span> Daily flow intensity (none to heavy)</li>
+    <li><span class="badge">Symptoms</span> Cramps, headaches, bloating, mood swings, etc.</li>
+    <li><span class="badge">Mood</span> Emotional state logs</li>
+    <li><span class="badge">Body</span> Basal body temperature, cervical mucus observations</li>
+    <li><span class="badge">Wellness</span> Energy level, stress level, sleep hours and quality</li>
+    <li><span class="badge">Intimacy</span> Sexual activity and protection (optional)</li>
+    <li><span class="badge">Profile</span> Name, birth year, health goals, conditions (optional)</li>
+    <li><span class="badge">Notes</span> Free-text daily notes</li>
+  </ul>
+  <p>This data is never uploaded to any server, shared with third parties, or used for advertising.</p>
+
+  <h2>4. How We Protect Your Data</h2>
+  <p>Your data is protected using industry-standard encryption:</p>
+  <ul>
+    <li><strong>Database encryption:</strong> All data is stored in an AES-256 encrypted Hive database. The encryption key is generated per device and stored in the device's secure keychain (iOS Keychain / Android Keystore).</li>
+    <li><strong>Biometric lock:</strong> An optional Face ID / Touch ID lock prevents unauthorized access to the app. Biometric data is processed entirely by the operating system and never accessed by Afrodite.</li>
+    <li><strong>PIN protection:</strong> A numeric PIN provides an additional access layer, stored in hashed form only.</li>
+    <li><strong>Backup encryption:</strong> Exported backup files are encrypted with a proprietary cipher before being saved. They cannot be read without the Afrodite app.</li>
+  </ul>
+
+  <h2>5. Data You Export (Backup)</h2>
+  <p>Afrodite lets you export an encrypted backup file (.json) and import it on a new device. This file is:</p>
+  <ul>
+    <li>Created entirely by you, on your device</li>
+    <li>Saved to a destination you choose (cloud storage, local files, etc.)</li>
+    <li>Encrypted — not readable without the Afrodite app</li>
+  </ul>
+  <p>Afrodite does not receive, see, or have access to any backup files you create.</p>
+
+  <h2>6. Third-Party Services</h2>
+  <p>Afrodite uses one third-party service for subscription management:</p>
+  <ul>
+    <li><strong>RevenueCat</strong> — processes Premium subscription purchases. RevenueCat may collect anonymized purchase data (no health data, no personally identifiable information beyond what Apple/Google provide for the transaction). See <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.</li>
+  </ul>
+  <p>Afrodite does <strong>not</strong> use advertising SDKs, analytics tools, crash-reporting services, or social login providers. We collect zero telemetry.</p>
+
+  <h2>7. Apple Health / Google Health Connect</h2>
+  <p>If you enable the optional sleep sync feature, Afrodite reads sleep data from Apple Health or Google Health Connect. This data is read-only, processed locally to display insights, and never transmitted anywhere.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>Afrodite is not directed at children under 13. We do not knowingly collect data from children. If you believe a child has used the app, please contact us and we will provide guidance on deleting any locally stored data.</p>
+
+  <h2>9. Your Rights &amp; Controls</h2>
+  <p>Because all data is stored locally on your device, you have complete control:</p>
+  <ul>
+    <li><strong>Access:</strong> All your data is visible within the app at any time.</li>
+    <li><strong>Export:</strong> Use Settings → Backup to export all your data.</li>
+    <li><strong>Delete:</strong> Use Settings → Clear All Data to erase logs, or Settings → Delete Account to erase everything including your profile and PIN.</li>
+    <li><strong>Portability:</strong> Exported backup files are structured JSON data you can inspect.</li>
+  </ul>
+  <p>For GDPR or CCPA requests, since we hold no server-side data, deletion is accomplished entirely within the app.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Material changes will be announced within the app. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this Privacy Policy? Contact us at:<br>
+  <a href="mailto:afroditeapp@gmail.com">afroditeapp@gmail.com</a></p>
+
+</div>
+
+<!-- ═══════════════════════  ESPAÑOL  ═══════════════════════ -->
+<div class="content" id="lang-es">
+
+  <p class="updated">Última actualización: 1 de mayo de 2026</p>
+
+  <h2>1. Quiénes somos</h2>
+  <p>Afrodite es un rastreador personal de ciclo menstrual y bienestar desarrollado por una desarrolladora independiente. La app está diseñada con una filosofía de <strong>privacidad ante todo, 100% sin conexión</strong>: tus datos de salud nunca salen de tu dispositivo a menos que tú elijas exportarlos explícitamente.</p>
+
+  <h2>2. Nuestra promesa de privacidad</h2>
+  <div class="highlight">
+    <p>🔒 <strong>Afrodite no recopila, transmite ni almacena tus datos personales ni de salud en ningún servidor.</strong> Todos los datos residen exclusivamente en tu dispositivo, cifrados en reposo.</p>
+  </div>
+
+  <h2>3. Datos que almacenamos localmente</h2>
+  <p>Afrodite almacena los siguientes datos <strong>únicamente en tu dispositivo</strong>:</p>
+  <ul>
+    <li><span class="badge">Ciclo</span> Fechas menstruales, duración del ciclo y del período</li>
+    <li><span class="badge">Flujo</span> Intensidad diaria del flujo (de ninguno a abundante)</li>
+    <li><span class="badge">Síntomas</span> Cólicos, dolores de cabeza, hinchazón, cambios de humor, etc.</li>
+    <li><span class="badge">Estado de ánimo</span> Registros emocionales</li>
+    <li><span class="badge">Cuerpo</span> Temperatura basal y observaciones de moco cervical</li>
+    <li><span class="badge">Bienestar</span> Nivel de energía, estrés, horas y calidad del sueño</li>
+    <li><span class="badge">Intimidad</span> Actividad sexual y protección (opcional)</li>
+    <li><span class="badge">Perfil</span> Nombre, año de nacimiento, objetivos y condiciones de salud (opcionales)</li>
+    <li><span class="badge">Notas</span> Notas diarias en texto libre</li>
+  </ul>
+  <p>Estos datos nunca se cargan a ningún servidor, no se comparten con terceros ni se usan para publicidad.</p>
+
+  <h2>4. Cómo protegemos tus datos</h2>
+  <p>Tus datos están protegidos con cifrado estándar de la industria:</p>
+  <ul>
+    <li><strong>Cifrado de base de datos:</strong> Todos los datos se almacenan en una base de datos Hive cifrada con AES-256. La clave de cifrado se genera por dispositivo y se guarda en el llavero seguro del sistema (iOS Keychain / Android Keystore).</li>
+    <li><strong>Bloqueo biométrico:</strong> Un bloqueo opcional con Face ID / Touch ID impide el acceso no autorizado. Los datos biométricos son procesados íntegramente por el sistema operativo; Afrodite nunca los accede.</li>
+    <li><strong>PIN de seguridad:</strong> Un PIN numérico proporciona una capa adicional de acceso, almacenado solo en forma de hash.</li>
+    <li><strong>Cifrado de copias de seguridad:</strong> Los archivos de copia exportados están cifrados con un cifrado propietario antes de guardarse. No pueden leerse sin la app Afrodite.</li>
+  </ul>
+
+  <h2>5. Datos que exportas (Copia de seguridad)</h2>
+  <p>Afrodite te permite exportar un archivo de copia cifrado (.json) e importarlo en un dispositivo nuevo. Este archivo:</p>
+  <ul>
+    <li>Lo creas tú, en tu dispositivo</li>
+    <li>Se guarda en el destino que tú elijas (almacenamiento en la nube, archivos locales, etc.)</li>
+    <li>Está cifrado — no es legible sin la app Afrodite</li>
+  </ul>
+  <p>Afrodite no recibe, ve ni tiene acceso a ningún archivo de copia que crees.</p>
+
+  <h2>6. Servicios de terceros</h2>
+  <p>Afrodite utiliza un servicio de terceros para la gestión de suscripciones:</p>
+  <ul>
+    <li><strong>RevenueCat</strong> — gestiona las compras de suscripción Premium. RevenueCat puede recopilar datos de compra anonimizados (sin datos de salud, sin información de identificación personal más allá de lo que Apple/Google proporcionan para la transacción). Ver la <a href="https://www.revenuecat.com/privacy" target="_blank">Política de Privacidad de RevenueCat</a>.</li>
+  </ul>
+  <p>Afrodite <strong>no</strong> utiliza SDKs publicitarios, herramientas de analítica, servicios de reporte de errores ni proveedores de inicio de sesión social. No recopilamos ningún tipo de telemetría.</p>
+
+  <h2>7. Apple Health / Google Health Connect</h2>
+  <p>Si activas la función opcional de sincronización de sueño, Afrodite lee datos de sueño de Apple Health o Google Health Connect. Estos datos son de solo lectura, se procesan localmente para mostrar estadísticas y nunca se transmiten a ningún lugar.</p>
+
+  <h2>8. Privacidad de menores</h2>
+  <p>Afrodite no está dirigida a menores de 13 años. No recopilamos datos de menores de forma consciente. Si crees que un menor ha usado la app, contáctanos y te proporcionaremos orientación para eliminar los datos almacenados localmente.</p>
+
+  <h2>9. Tus derechos y controles</h2>
+  <p>Como todos los datos se almacenan localmente en tu dispositivo, tienes control total:</p>
+  <ul>
+    <li><strong>Acceso:</strong> Todos tus datos son visibles dentro de la app en cualquier momento.</li>
+    <li><strong>Exportación:</strong> Usa Ajustes → Copia de seguridad para exportar todos tus datos.</li>
+    <li><strong>Eliminación:</strong> Usa Ajustes → Borrar todos los datos para borrar registros, o Ajustes → Eliminar cuenta para borrar todo, incluyendo tu perfil y PIN.</li>
+    <li><strong>Portabilidad:</strong> Los archivos de copia exportados son JSON estructurado que puedes inspeccionar.</li>
+  </ul>
+  <p>Para solicitudes RGPD o CCPA, dado que no almacenamos datos en servidores, la eliminación se realiza íntegramente dentro de la app.</p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>Podemos actualizar esta Política de Privacidad periódicamente. Los cambios importantes se anunciarán dentro de la app. La fecha de "Última actualización" al inicio de esta página refleja la revisión más reciente.</p>
+
+  <h2>11. Contacto</h2>
+  <p>¿Preguntas sobre esta Política de Privacidad? Contáctanos en:<br>
+  <a href="mailto:afroditeapp@gmail.com">afroditeapp@gmail.com</a></p>
+
+</div>
+
+<footer>
+  © 2026 Afrodite · Tu ciclo, solo tuyo.
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+  }
+  // Auto-detect browser language
+  const browserLang = (navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+  setLang(browserLang);
+</script>
+
+</body>
+</html>
