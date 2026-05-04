@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afrodite — Your Cycle, Yours Alone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:  #FCF9F5;
+      --plum:   #5E3E4D;
+      --plum-dark: #3B2C3E;
+      --mauve:  #E8D5DF;
+      --rose:   #C47B8A;
+      --text:   #2E1F28;
+      --muted:  #7A6570;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.65;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--plum-dark);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    header .icon {
+      width: 88px;
+      height: 88px;
+      background: var(--mauve);
+      border-radius: 22px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    header p {
+      margin-top: 12px;
+      color: var(--mauve);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 28px;
+      background: var(--rose);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    section + section {
+      border-top: 1px solid var(--mauve);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--plum);
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--plum);
+      margin: 24px 0 8px;
+    }
+    p { color: var(--muted); font-size: 0.97rem; margin-bottom: 12px; }
+    ul { padding-left: 20px; color: var(--muted); font-size: 0.97rem; }
+    ul li { margin-bottom: 8px; }
+
+    /* ── FEATURE GRID ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--mauve);
+      border-radius: 14px;
+      padding: 20px 18px;
+    }
+    .feature-card .emoji { font-size: 1.6rem; margin-bottom: 10px; }
+    .feature-card strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .feature-card span { font-size: 0.85rem; color: var(--muted); }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: var(--plum-dark);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .contact-box p { color: var(--mauve); margin-bottom: 16px; }
+    .contact-box a {
+      display: inline-block;
+      background: var(--rose);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .contact-box a:hover { opacity: 0.85; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--plum-dark);
+      text-align: center;
+      padding: 28px 24px;
+    }
+    footer p {
+      color: var(--mauve);
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    footer a { color: var(--rose); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="icon">🌸</div>
+    <h1>Afrodite</h1>
+    <p>Your cycle, yours alone. 100% offline · No tracking · No cloud.</p>
+    <span class="badge">Available on iOS</span>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About the App</h2>
+    <p>
+      Afrodite is a private cycle tracking app designed for women who value their health data and their privacy.
+      Everything stays on your device — no account required, no data sent to servers, ever.
+    </p>
+    <p>
+      Track your cycle, understand your phases, predict upcoming periods, and care for your wellbeing — all in one place, completely offline.
+    </p>
+
+    <div class="features">
+      <div class="feature-card">
+        <div class="emoji">🗓</div>
+        <strong>Cycle Tracking</strong>
+        <span>Log flow, mood, symptoms and more daily</span>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🔮</div>
+        <strong>Predictions</strong>
+        <span>Period & fertile window forecasts</span>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">📊</div>
+        <strong>Analytics</strong>
+        <span>Rhythm score and cycle fingerprint</span>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🕊</div>
+        <strong>Sanctuary</strong>
+        <span>Guided exercises for every phase</span>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">📄</div>
+        <strong>Cycle Reports</strong>
+        <span>Full PDF analysis and predictions</span>
+      </div>
+      <div class="feature-card">
+        <div class="emoji">🔒</div>
+        <strong>Private by Design</strong>
+        <span>PIN & biometrics · zero cloud storage</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <h2>Support</h2>
+    <p>
+      Have a question, found a bug, or need help with the app? We respond within 1–2 business days.
+    </p>
+    <div class="contact-box">
+      <p>Reach out anytime — we're happy to help.</p>
+      <a href="mailto:alennys.sanchez.perez@gmail.com">Contact Support</a>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p><em>Last updated: May 2026</em></p>
+
+    <p>
+      Afrodite is built on a simple principle: your health data belongs to you.
+      The app collects no personal information and sends no data to any server.
+    </p>
+
+    <h3>Data We Collect</h3>
+    <p>
+      Afrodite does <strong>not</strong> collect, transmit, or share any personal data.
+      All information you enter — cycle logs, symptoms, mood, preferences — is stored exclusively
+      on your device using encrypted local storage.
+    </p>
+
+    <h3>Data Storage</h3>
+    <ul>
+      <li>All data is stored locally on your device using AES-256 encrypted storage.</li>
+      <li>No data is ever uploaded to a server, cloud, or third-party service.</li>
+      <li>Deleting the app removes all data permanently.</li>
+    </ul>
+
+    <h3>Third-Party Services</h3>
+    <ul>
+      <li><strong>RevenueCat</strong> — used to process premium subscriptions. RevenueCat may collect purchase history and device identifiers as required for payment processing. See <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.</li>
+      <li><strong>Apple HealthKit</strong> — optionally used to read sleep data for pre-filling your daily log. No data is written to HealthKit without your explicit consent.</li>
+    </ul>
+
+    <h3>Authentication</h3>
+    <p>
+      The app uses a local PIN and/or biometrics (Face ID / Touch ID) to protect access.
+      These credentials never leave your device.
+    </p>
+
+    <h3>Children's Privacy</h3>
+    <p>
+      Afrodite is intended for users aged 13 and older. We do not knowingly collect data from children under 13.
+    </p>
+
+    <h3>Changes to This Policy</h3>
+    <p>
+      We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date.
+    </p>
+
+    <h3>Contact</h3>
+    <p>
+      For privacy-related questions, contact us at
+      <a href="mailto:alennys.sanchez.perez@gmail.com">alennys.sanchez.perez@gmail.com</a>.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Afrodite · <a href="#privacy">Privacy Policy</a> · <a href="#support">Support</a></p>
+  </footer>
+
+</body>
+</html>
