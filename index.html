@@ -10,13 +10,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream:  #FCF9F5;
-      --plum:   #5E3E4D;
+      --cream:     #FCF9F5;
+      --plum:      #5E3E4D;
       --plum-dark: #3B2C3E;
-      --mauve:  #E8D5DF;
-      --rose:   #C47B8A;
-      --text:   #2E1F28;
-      --muted:  #7A6570;
+      --mauve:     #E8D5DF;
+      --rose:      #C47B8A;
+      --text:      #2E1F28;
+      --muted:     #7A6570;
     }
 
     body {
@@ -29,94 +29,175 @@
     /* ── HEADER ── */
     header {
       background: var(--plum-dark);
-      padding: 64px 24px 56px;
+      padding: 72px 24px 64px;
       text-align: center;
     }
     header .icon {
-      width: 88px;
-      height: 88px;
+      width: 88px; height: 88px;
       background: var(--mauve);
       border-radius: 22px;
       margin: 0 auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       font-size: 42px;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
       color: #fff;
       letter-spacing: 0.02em;
     }
-    header p {
-      margin-top: 12px;
+    header .tagline {
+      margin-top: 14px;
       color: var(--mauve);
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 300;
+      max-width: 400px;
+      margin-left: auto; margin-right: auto;
+    }
+    header .sub {
+      margin-top: 8px;
+      color: rgba(232,213,223,0.55);
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
     }
     .badge {
       display: inline-block;
-      margin-top: 28px;
+      margin-top: 32px;
       background: var(--rose);
       color: #fff;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 6px 16px;
-      border-radius: 20px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 30px;
+      letter-spacing: 0.04em;
       text-decoration: none;
-      transition: opacity 0.15s;
+      transition: opacity 0.15s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(196,123,138,0.35);
     }
-    .badge:hover { opacity: 0.85; }
+    .badge:hover { opacity: 0.9; transform: translateY(-1px); }
 
     /* ── SECTIONS ── */
     section {
-      max-width: 720px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 64px 24px;
     }
-    section + section {
-      border-top: 1px solid var(--mauve);
-    }
+    section + section { border-top: 1px solid var(--mauve); }
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: var(--plum);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
-    h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--plum);
-      margin: 24px 0 8px;
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.97rem;
+      margin-bottom: 40px;
     }
     p { color: var(--muted); font-size: 0.97rem; margin-bottom: 12px; }
-    ul { padding-left: 20px; color: var(--muted); font-size: 0.97rem; }
-    ul li { margin-bottom: 8px; }
+
+    /* ── PRIVACY PILLS ── */
+    .privacy-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 0;
+      justify-content: center;
+    }
+    .pill {
+      background: rgba(94,62,77,0.07);
+      border: 1px solid var(--mauve);
+      border-radius: 30px;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      color: var(--plum);
+      font-weight: 500;
+    }
+
+    /* ── FEATURE SHOWCASE ── */
+    .showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+      margin-top: 16px;
+    }
+    .showcase-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .showcase-item.reverse { direction: rtl; }
+    .showcase-item.reverse > * { direction: ltr; }
+
+    .phone-frame {
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow:
+        0 2px 0 rgba(255,255,255,0.15) inset,
+        0 24px 60px rgba(59,44,62,0.22),
+        0 4px 12px rgba(59,44,62,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: block;
+    }
+    .phone-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .showcase-text {}
+    .showcase-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+    .showcase-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--plum-dark);
+      margin-bottom: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .showcase-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 580px) {
+      .showcase-item, .showcase-item.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 28px;
+      }
+      .phone-frame { max-width: 200px; }
+      .showcase-item.reverse .phone-frame { order: -1; }
+    }
 
     /* ── FEATURE GRID ── */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
+      gap: 14px;
       margin-top: 8px;
     }
     .feature-card {
       background: #fff;
       border: 1px solid var(--mauve);
-      border-radius: 14px;
-      padding: 20px 18px;
+      border-radius: 16px;
+      padding: 22px 18px;
     }
     .feature-card .emoji { font-size: 1.6rem; margin-bottom: 10px; }
-    .feature-card strong {
-      display: block;
-      font-size: 0.95rem;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
+    .feature-card strong { display: block; font-size: 0.95rem; color: var(--text); margin-bottom: 4px; }
     .feature-card span { font-size: 0.85rem; color: var(--muted); }
 
     /* ── CONTACT ── */
@@ -137,6 +218,7 @@
       font-weight: 500;
       font-size: 0.95rem;
       transition: opacity 0.2s;
+      margin: 4px;
     }
     .contact-box a:hover { opacity: 0.85; }
 
@@ -146,11 +228,7 @@
       text-align: center;
       padding: 28px 24px;
     }
-    footer p {
-      color: var(--mauve);
-      font-size: 0.85rem;
-      margin: 0;
-    }
+    footer p { color: var(--mauve); font-size: 0.85rem; margin: 0; }
     footer a { color: var(--rose); text-decoration: none; }
   </style>
 </head>
@@ -160,31 +238,120 @@
   <header>
     <div class="icon">🌸</div>
     <h1>Afrodite</h1>
-    <p>Your cycle, yours alone. 100% offline · No tracking · No cloud.</p>
+    <p class="tagline">Your cycle, yours alone.</p>
+    <p class="sub">100% OFFLINE · NO ACCOUNT · NO CLOUD</p>
     <a class="badge" href="https://apps.apple.com/app/afrodite-cycle-tracker/id6763807989" target="_blank" rel="noopener">⬇ Download on the App Store</a>
   </header>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About the App</h2>
-    <p>
-      Afrodite is a private cycle tracking app designed for women who value their health data and their privacy.
-      Everything stays on your device — no account required, no data sent to servers, ever.
-    </p>
-    <p>
-      Track your cycle, understand your phases, predict upcoming periods, and care for your wellbeing — all in one place, completely offline.
-    </p>
+  <!-- PRIVACY PROMISE -->
+  <section style="text-align:center; padding-top: 52px; padding-bottom: 52px;">
+    <h2>Built for your privacy</h2>
+    <p class="section-sub" style="margin-bottom:0;">Most cycle apps upload your data to their servers — and profit from it.<br>Afrodite works entirely on your device. Your health data never leaves your phone.</p>
+    <div class="privacy-pills">
+      <span class="pill">🔒 No account required</span>
+      <span class="pill">☁️ No cloud sync</span>
+      <span class="pill">📵 Works offline</span>
+      <span class="pill">🙈 No data collection</span>
+      <span class="pill">👆 PIN &amp; Face ID lock</span>
+    </div>
+  </section>
 
+  <!-- SCREENSHOT SHOWCASE -->
+  <section>
+    <h2>See it in action</h2>
+    <p class="section-sub">Everything you need to understand your cycle, in one beautiful app.</p>
+
+    <div class="showcase">
+
+      <!-- Home -->
+      <div class="showcase-item">
+        <div class="phone-frame">
+          <img src="images/screen_home.jpg" alt="Afrodite home screen showing cycle phase and hormone levels" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Home</div>
+          <h3>Know where you are in your cycle, every day</h3>
+          <p>The home screen shows your current phase, cycle day, and days until your next period — at a glance. Hormone indicators (E2 and PG) help you understand what's happening in your body right now.</p>
+        </div>
+      </div>
+
+      <!-- Predictions -->
+      <div class="showcase-item reverse">
+        <div class="phone-frame">
+          <img src="images/screen_predictions.jpg" alt="Predictions screen showing period forecast and cycle phase map" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Predictions</div>
+          <h3>See your next period, fertile window &amp; phases ahead</h3>
+          <p>Afrodite calculates your cycle phase map and fertile window based on your personal history — not a generic 28-day average. The more you log, the more accurate it gets.</p>
+        </div>
+      </div>
+
+      <!-- Log -->
+      <div class="showcase-item">
+        <div class="phone-frame">
+          <img src="images/screen_log.jpg" alt="Daily log screen showing mood tracking" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Daily Log</div>
+          <h3>Track how you feel — mood, symptoms, sleep &amp; more</h3>
+          <p>Log your flow, mood, physical symptoms, energy, sleep, temperature, and notes in one tap. Everything is stored locally and tied to your cycle — so patterns emerge over time.</p>
+        </div>
+      </div>
+
+      <!-- Analytics -->
+      <div class="showcase-item reverse">
+        <div class="phone-frame">
+          <img src="images/screen_analytics.jpg" alt="Analytics screen showing rhythm score and body fingerprint" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Analytics</div>
+          <h3>Your body, decoded</h3>
+          <p>The Analytics screen calculates your Rhythm Score, average cycle length, luteal phase duration, and more — building a picture of your hormonal health that evolves with every cycle logged.</p>
+        </div>
+      </div>
+
+      <!-- Sanctuary -->
+      <div class="showcase-item">
+        <div class="phone-frame">
+          <img src="images/screen_sanctuary.jpg" alt="Sanctuary screen with guided exercises for each cycle phase" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Sanctuary</div>
+          <h3>Guided practices matched to your phase</h3>
+          <p>Breathing for cramps. Affirmations for the luteal phase. Movement for your period days. The Sanctuary adapts to where you are in your cycle — so the right support is always one tap away.</p>
+        </div>
+      </div>
+
+      <!-- Cycle Report -->
+      <div class="showcase-item reverse">
+        <div class="phone-frame">
+          <img src="images/screen_report.jpg" alt="Cycle Report screen showing detailed cycle analysis" />
+        </div>
+        <div class="showcase-text">
+          <div class="showcase-label">Cycle Report</div>
+          <h3>A full report of your cycle history</h3>
+          <p>Get a detailed analysis covering cycle regularity, flow patterns, mood trends, sleep, and a prediction for your next cycle — based on your own data, not population averages.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL FEATURES -->
+  <section>
+    <h2>Everything in one place</h2>
+    <p class="section-sub">No ads. No upsells mid-feature. Just the tools you need.</p>
     <div class="features">
       <div class="feature-card">
         <div class="emoji">🗓</div>
         <strong>Cycle Tracking</strong>
-        <span>Log flow, mood, symptoms and more daily</span>
+        <span>Flow, mood, symptoms, sleep &amp; more — daily</span>
       </div>
       <div class="feature-card">
         <div class="emoji">🔮</div>
         <strong>Predictions</strong>
-        <span>Period & fertile window forecasts</span>
+        <span>Period &amp; fertile window forecasts</span>
       </div>
       <div class="feature-card">
         <div class="emoji">📊</div>
@@ -199,12 +366,12 @@
       <div class="feature-card">
         <div class="emoji">📄</div>
         <strong>Cycle Reports</strong>
-        <span>Full PDF analysis and predictions</span>
+        <span>Full analysis &amp; next cycle prediction</span>
       </div>
       <div class="feature-card">
         <div class="emoji">🔒</div>
         <strong>Private by Design</strong>
-        <span>PIN & biometrics · zero cloud storage</span>
+        <span>PIN &amp; biometrics · zero cloud storage</span>
       </div>
     </div>
   </section>
@@ -212,9 +379,7 @@
   <!-- SUPPORT -->
   <section id="support">
     <h2>Support</h2>
-    <p>
-      Have a question, found a bug, or need help with the app? We respond within 1–2 business days.
-    </p>
+    <p>Have a question, found a bug, or need help with the app? We respond within 1–2 business days.</p>
     <div class="contact-box">
       <p>Reach out anytime — we're happy to help.</p>
       <a href="mailto:afroditecycletracker@gmail.com">Contact Support</a>
@@ -224,13 +389,10 @@
   <!-- PRIVACY -->
   <section id="privacy">
     <h2>Privacy Policy</h2>
-    <p>
-      Afrodite is built on a simple principle: your health data belongs to you.
-      Read our full privacy policy in your preferred language:
-    </p>
+    <p>Afrodite is built on a simple principle: your health data belongs to you. Read our full privacy policy in your preferred language:</p>
     <div class="contact-box">
-      <p>Available in English and Spanish — auto-detected by your browser.</p>
-      <a href="privacy.html" style="margin-right: 12px;">Privacy Policy (EN)</a>
+      <p>Available in English and Spanish.</p>
+      <a href="privacy.html">Privacy Policy (EN)</a>
       <a href="privacy.html#es">Política de Privacidad (ES)</a>
     </div>
   </section>
